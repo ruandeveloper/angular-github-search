@@ -1,8 +1,4 @@
-<h1 align="center">
-  Angular GitHub Search
-</h1>
-
-<br>
+# Angular GitHub Search
 
 ## 🎨 Prototipagem
 
@@ -22,4 +18,12 @@
 ## 🚀 Como executar?
 
 -   Baixe as dependencias `npm i`
--   Execute a aplicação `ng serve`
+
+### Variáveis de ambiente
+
+-   Crie um arquivo `.env` na raiz do projeto
+-   Adicione a variável `GITHUB_TOKEN=abc`, substituindo `abc` pelo seu personal token do github (necessário, os scopes: user:read, user:email)
+-   Se estiver no windows, configure o npm para executar arquivos sh: `npm config set script-shell "C:\\Program Files\\Git\\bin\\bash.exe"`
+-   Ao executar `npm run env-set` ou `npm start`, será criado o arquivo `env-config.js` na pasta assets, setando essa variável na variável window
+
+-   Execute a aplicação com `npm start`

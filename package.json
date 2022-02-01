@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run set-env && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
     "coverage": "ng test --no-watch --code-coverage",
+    "set-env": "bash ./env.sh",
     "deploy": "ng deploy --base-href=/angular-github-search/"
   },
   "private": true,
