@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1643680634230,
+  "timestamp": 1643680728368,
   "index": "/angular-github-search/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "/angular-github-search/dark-theme.css",
         "/angular-github-search/favicon.ico",
         "/angular-github-search/index.html",
-        "/angular-github-search/main.3b98a86eb18c311f8000.js",
+        "/angular-github-search/main.96b51539779e83e85551.js",
         "/angular-github-search/manifest.webmanifest",
         "/angular-github-search/polyfills.6eee96b27a9280833112.js",
         "/angular-github-search/runtime.85d45853a5cbb4a0ada3.js",
@@ -80,8 +80,8 @@
     "/angular-github-search/classic-theme.css": "763ce21638cdf334c576589da136811ec882d5bf",
     "/angular-github-search/dark-theme.css": "abdfc2f025af1cf49f1468804a2dd55634fe05c9",
     "/angular-github-search/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/angular-github-search/index.html": "7b3e4a0aa35e7e303afbcfb6f2833252b8e41ff1",
-    "/angular-github-search/main.3b98a86eb18c311f8000.js": "30cd8ad12e10a2ce5144235cfd35a2d1517540d7",
+    "/angular-github-search/index.html": "2a1077d55fceefecb08328f80a62b3a50d57a0c0",
+    "/angular-github-search/main.96b51539779e83e85551.js": "ae5ed1380c2cc3c0e1e18be99aa4ef4e647cb60c",
     "/angular-github-search/manifest.webmanifest": "847a3c81d62c261514012fa8298d8252d7c2fdec",
     "/angular-github-search/polyfills.6eee96b27a9280833112.js": "ed5a401e13410914f59cf6f83260c758d578cce3",
     "/angular-github-search/runtime.85d45853a5cbb4a0ada3.js": "92fd0d2843d0fe952bb4e94b26fedc41141885a0",
