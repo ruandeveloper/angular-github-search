@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "coverage": "ng test --no-watch --code-coverage"
+    "coverage": "ng test --no-watch --code-coverage",
+    "deploy": "ng deploy --base-href=/angular-github-search/"
   },
   "private": true,
   "dependencies": {
