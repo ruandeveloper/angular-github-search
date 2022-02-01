@@ -8,18 +8,26 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CoreModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		CoreModule,
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: environment.production,
+			registrationStrategy: 'registerWhenStable:30000'
+		})
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+	constructor() {
+		if (!environment.githubToken) {
+			throw new Error(
+				'Configure o seu access token do github nas variaveis de ambiente!'
+			);
+		}
+	}
+}
