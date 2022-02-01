@@ -11,5 +11,5 @@ export const environment = {
 	production: true,
 	defaultTheme: 'dark',
 	githubGraphQlUrl: 'https://api.github.com/graphql',
-	githubToken: `${window.env.GITHUB_TOKEN}`
+	githubToken: `${window.env?.GITHUB_TOKEN}`
 };
