@@ -1,0 +1,12 @@
+<app-user-card
+	*ngIf="data?.user"
+	[user]="data.user"
+	[dialogMode]="true"
+	(removeClicked)="onRemoveItem()"
+></app-user-card>
+<app-repository-card
+	*ngIf="data?.repository"
+	[repository]="data.repository"
+	[dialogMode]="true"
+	(removeClicked)="onRemoveItem()"
+></app-repository-card>

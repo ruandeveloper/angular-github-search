@@ -1,0 +1,48 @@
+<app-search-input
+	class="search-input"
+	(searchTermChanged)="onSearchTermChange($event)"
+></app-search-input>
+
+<ng-template #loading>
+	<div class="loading" *ngIf="isLoading">
+		<div class="loading__icon">
+			<fa-icon [icon]="icons.faSync"></fa-icon>
+		</div>
+	</div>
+</ng-template>
+
+<ng-container *ngIf="(result$ | async) as result">
+	<ng-container *ngTemplateOutlet="loading" [ngIf]="isLoading"></ng-container>
+
+	<ul class="search-items">
+		<li *ngFor="let item of result.items; trackBy: trackBy">
+			<app-user-card
+				*ngIf="item.user"
+				[user]="item.user"
+				[isFavorite]="item.isFavorite ?? false"
+				(removeClicked)="onRemoveItem(item)"
+				(favoriteChanged)="onToggleFavorite(item, $event)"
+			>
+			</app-user-card>
+			<app-repository-card
+				*ngIf="item.repository"
+				[repository]="item.repository"
+				[isFavorite]="item.isFavorite ?? false"
+				(removeClicked)="onRemoveItem(item)"
+				(favoriteChanged)="onToggleFavorite(item, $event)"
+			></app-repository-card>
+		</li>
+
+		<button
+			class="search-items__paginate-btn"
+			(click)="nextPage()"
+			mat-stroked-button
+			*ngIf="result.pageUsers?.hasNextPage || result.pageRepositories?.hasNextPage"
+		>
+			<fa-icon [icon]="icons.faSync"></fa-icon>
+			Carregar mais
+		</button>
+	</ul>
+</ng-container>
+
+<ng-container *ngTemplateOutlet="loading" [ngIf]="isLoading"></ng-container>

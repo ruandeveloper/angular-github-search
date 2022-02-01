@@ -1,0 +1,32 @@
+.user-repositories {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-header-background);
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+}
+
+.user-repository {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+
+  &__name {
+    display: block;
+    font-weight: bold;
+    color: var(--link-color);
+  }
+
+  &__description {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-color);
+  }
+}

@@ -1,0 +1,15 @@
+@import './styles/utils/reset';
+@import './styles/utils/font-face';
+@import './styles/utils/material';
+@import './styles/themes/global';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--body-background);
+}

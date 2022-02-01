@@ -1,0 +1,10 @@
+<ul class="languages">
+  <li
+    class="languages__item"
+    *ngFor="let language of languages; trackBy: trackBy"
+    [style.background-color]="language.color || '#000'"
+    data-test="language-tag"
+  >
+    {{ language.name }}
+  </li>
+</ul>

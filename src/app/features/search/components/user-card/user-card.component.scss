@@ -1,0 +1,70 @@
+@import 'card';
+
+.user-card {
+  @extend %card-borders;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--card-header-background);
+    justify-content: center;
+    cursor: pointer;
+
+    &-img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 24px 21px;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--link-color);
+
+    &-link {
+      text-decoration: none;
+      color: var(--link-color);
+    }
+  }
+
+  &__bio {
+    margin-top: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--text-color)
+  }
+
+  &__counters {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 14px;
+  }
+
+  %content-margin {
+    display: block;
+    margin-top: 24px;
+  }
+
+  &__followers-avatar {
+    @extend %content-margin;
+  }
+
+  &__languages {
+    @extend %content-margin;
+  }
+
+  &__repositories {
+    @extend %content-margin;
+  }
+
+  @include card-actions('.user-card');
+}

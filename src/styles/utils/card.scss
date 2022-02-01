@@ -1,0 +1,18 @@
+%card-borders {
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@mixin card-actions($selector) {
+  #{$selector}__actions {
+    border-top: 1px solid var(--border-color);
+    padding: 6px 21px 15px;
+  }
+
+  #{$selector}__tags {
+    display: block;
+    margin-top: 6px;
+  }
+}

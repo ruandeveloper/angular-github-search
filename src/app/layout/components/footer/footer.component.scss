@@ -1,0 +1,18 @@
+.footer {
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-background);
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--footer-color);
+  }
+
+  &__link {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+}

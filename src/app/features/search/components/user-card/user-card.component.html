@@ -1,0 +1,58 @@
+<article class="user-card">
+	<header
+		class="user-card__header"
+		(click)="openDialog()"
+		(keyup.enter)="openDialog()"
+	>
+		<img
+			class="user-card__header-img"
+			[src]="user?.avatarUrl | avatarUrl"
+			[alt]="user?.name"
+		/>
+	</header>
+
+	<div
+		class="user-card__content"
+		(click)="openDialog(false)"
+		(keyup.enter)="openDialog(false)"
+	>
+		<h2
+			class="user-card__name"
+			(click)="openDialog()"
+			(keyup.enter)="openDialog()"
+			data-test="user-card-name"
+		>
+			{{ user?.name }}
+		</h2>
+
+		<p class="user-card__bio">{{ user?.bio }}</p>
+
+		<app-followers-avatar
+			class="user-card__followers-avatar"
+			*ngIf="user?.followers?.nodes"
+			[followers]="user?.followers?.nodes"
+			[totalFollowers]="user?.followers?.totalCount ?? 0"
+		></app-followers-avatar>
+
+		<app-languages
+			class="user-card__languages"
+			[languages]="user?.repositories?.nodes | userLanguages"
+		></app-languages>
+
+		<app-user-repositories
+			class="user-card__repositories"
+			*ngIf="dialogMode && user?.repositories?.nodes"
+			[repositories]="user?.repositories?.nodes"
+		></app-user-repositories>
+	</div>
+
+	<footer class="user-card__actions">
+		<app-action-buttons
+			class="user-card__action-buttons"
+			[isFavorite]="isFavorite"
+			(removeClicked)="remove()"
+			(favoriteChanged)="toggleFavorite($event)"
+		></app-action-buttons>
+		<app-tags class="user-card__tags"></app-tags>
+	</footer>
+</article>

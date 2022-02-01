@@ -1,0 +1,59 @@
+<article class="repository-card">
+	<header
+		class="repository-card__header"
+		(click)="openDialog()"
+		(keyup.enter)="openDialog()"
+	>
+		<fa-icon
+			class="repository-card__header-icon"
+			[icon]="icons.faCode"
+		></fa-icon>
+		<h2 class="repository-card__header-name">{{ repository?.name }}</h2>
+	</header>
+
+	<div
+		class="repository-card__content"
+		(click)="openDialog()"
+		(keyup.enter)="openDialog()"
+	>
+		<p class="repository-card__description">
+			{{ repository?.description }}
+		</p>
+
+		<div class="repository-card__counters">
+			<app-counter-tag
+				[icon]="icons.faEye"
+				[count]="repository?.watchers?.totalCount ?? 0"
+				[description]="'Watchers'"
+			></app-counter-tag>
+
+			<app-counter-tag
+				[icon]="icons.faStar"
+				[count]="repository?.stargazerCount ?? 0"
+				[description]="'Stars'"
+			></app-counter-tag>
+
+			<app-counter-tag
+				[icon]="icons.faBug"
+				[count]="repository?.issues?.totalCount ?? 0"
+				[description]="'Issues abertas'"
+			></app-counter-tag>
+		</div>
+
+		<app-languages
+			*ngIf="(repository?.languages?.nodes?.length ?? 0) > 0"
+			[languages]="repository?.languages?.nodes"
+			class="repository-card__languages"
+		></app-languages>
+	</div>
+
+	<footer class="repository-card__actions">
+		<app-action-buttons
+			class="repository-card__action-buttons"
+			[isFavorite]="isFavorite"
+			(removeClicked)="remove()"
+			(favoriteChanged)="toggleFavorite($event)"
+		></app-action-buttons>
+		<app-tags class="repository-card__tags"></app-tags>
+	</footer>
+</article>

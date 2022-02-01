@@ -1,0 +1,19 @@
+.header {
+  min-height: 216px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-background);
+  transition: all 600ms;
+
+  &__logo {
+    font-size: 96px;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 600ms;
+
+    &--active {
+      color: #161B22;
+    }
+  }
+}

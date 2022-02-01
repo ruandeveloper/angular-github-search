@@ -1,0 +1,21 @@
+<ul class="user-repositories">
+	<li
+		class="user-repositories__item"
+		*ngFor="let repository of repositories; trackBy: trackBy"
+	>
+		<a [href]="repository.url" class="user-repository" target="_blank">
+			<span
+				class="user-repository__name"
+				data-test="user-repository-name"
+			>
+				{{ repository.name }}
+			</span>
+			<span
+				class="user-repository__description"
+				data-test="user-repository-description"
+			>
+				{{ repository.description }}
+			</span>
+		</a>
+	</li>
+</ul>

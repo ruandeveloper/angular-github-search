@@ -1,0 +1,13 @@
+<header class="header">
+  <ng-container *ngIf="currentTheme$ | async as currentTheme">
+    <fa-icon
+      class="header__logo"
+      [ngClass]="{
+        'header__logo--active': currentTheme === 'classic'
+      }"
+      [icon]="faGithub"
+      [matTooltip]="'Clique para alterar o tema'"
+      (click)="changeTheme(currentTheme)"
+    ></fa-icon>
+  </ng-container>
+</header>

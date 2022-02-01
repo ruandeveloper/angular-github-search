@@ -1,0 +1,11 @@
+.counter-tag {
+  width: fit-content;
+  padding: 3px 5px;
+
+  background: var(--tag-background);
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tag-color);
+}

@@ -1,0 +1,29 @@
+.search-input {
+  &-container {
+    margin: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    background: var(--body-background);
+    border: 2px solid var(--border-color);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    padding: 12px 20px;
+  }
+
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 22px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+
+  &::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+}

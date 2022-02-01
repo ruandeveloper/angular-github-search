@@ -1,0 +1,36 @@
+<div class="tags">
+	<fa-icon class="tags__icon" [icon]="icons.faTags"></fa-icon>
+	<ul class="tags__list">
+		<li
+			class="tags__item"
+			*ngFor="let tag of tags; let i = index; trackBy: trackBy"
+		>
+			<input
+				type="text"
+				class="tags__input"
+				[ngModel]="tags[i]"
+				(change)="changeTag(i, $event)"
+				autoSizeInput
+				[minWidth]="20"
+				[maxWidth]="220"
+			/>
+
+			<button
+				class="tags__remove"
+				mat-stroked-button
+				(click)="removeTag(i)"
+			>
+				<fa-icon [icon]="icons.faTrash"></fa-icon>
+			</button>
+		</li>
+
+		<button
+			mat-stroked-button
+			class="tags__add"
+			[matTooltip]="'Adicionar nova tag'"
+			(click)="addNewTag()"
+		>
+			<fa-icon [icon]="icons.faPlus"></fa-icon>
+		</button>
+	</ul>
+</div>

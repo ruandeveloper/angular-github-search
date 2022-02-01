@@ -1,0 +1,14 @@
+.action-buttons {
+  display: flex;
+  margin-left: -10px;
+
+  &__favorite {
+    font-size: 18px;
+    color: #EB5757;
+  }
+
+  &__delete {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+}

@@ -1,0 +1,17 @@
+<ul class="followers">
+  <li
+    class="followers__item"
+    *ngFor="let follower of followers; trackBy: trackBy"
+  >
+    <a class="followers__link" [href]="follower.url" target="_blank">
+      <img
+        class="followers__avatar"
+        [src]="follower.avatarUrl | avatarUrl"
+        [alt]="follower.name"
+      />
+    </a>
+  </li>
+  <li class="followers__item" *ngIf="remaningFollowers > 0">
+    <span class="followers__remaning">+ {{ remaningFollowers }}</span>
+  </li>
+</ul>

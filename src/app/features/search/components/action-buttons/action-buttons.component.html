@@ -1,0 +1,15 @@
+<div class="action-buttons">
+  <button
+    class="action-buttons__favorite"
+    mat-icon-button
+    (click)="toggleFavorite()"
+  >
+    <fa-icon
+      [icon]="isFavorite ? icons.faHeartSolid : icons.faHeartRegular"
+    ></fa-icon>
+  </button>
+
+  <button class="action-buttons__delete" mat-icon-button (click)="remove()">
+    <fa-icon [icon]="icons.faTrash"></fa-icon>
+  </button>
+</div>
