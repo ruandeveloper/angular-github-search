@@ -9,7 +9,7 @@
 -   Prototipagem feita atráves do Figma
 -   Layout inspirado no GitHub
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKx6wgIcIUYxVe8IuGXpIah%2FGithub-Search%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+[Figma](https://www.figma.com/file/Kx6wgIcIUYxVe8IuGXpIah/Github-Search?node-id=0%3A1)
 
 ## ✨ Tecnologias
 
