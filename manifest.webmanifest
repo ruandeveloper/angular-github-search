@@ -1,8 +1,8 @@
 {
   "name": "angular-github-search",
   "short_name": "angular-github-search",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#161B22",
+  "background_color": "#0D1117",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
