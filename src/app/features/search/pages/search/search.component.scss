@@ -1,8 +1,8 @@
-@import 'animations';
+@import "animations";
 
 .search-input {
   display: block;
-  margin: -38px auto 0 auto;
+  margin: -38px auto 0;
   max-width: 620px;
 }
 
@@ -22,7 +22,7 @@
     color: var(--text-color);
     border: 1px solid var(--border-color);
     padding: 10px 30px;
-    font-family: montserrat;
+    font-family: montserrat, sans-serif;
     font-weight: 600;
     font-size: 14px;
     line-height: initial;
@@ -42,6 +42,7 @@
     width: fit-content;
     font-size: 48px;
     color: var(--text-color);
+
     @extend %spin-animation;
   }
 }

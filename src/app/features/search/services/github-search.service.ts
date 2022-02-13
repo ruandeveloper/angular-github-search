@@ -1,13 +1,14 @@
-import {
-	GithubUser,
-	GithubRepository,
-	GithubSearch
-} from './../models/github-response.model';
 import { Injectable } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Apollo, gql } from 'apollo-angular';
-import { SearchItem, SearchResult } from '../models';
+import {
+	SearchItem,
+	SearchResult,
+	GithubUser,
+	GithubRepository,
+	GithubSearch
+} from '../models';
 import { DeleteItemService, FavoriteItemService } from '.';
 
 export const QUERY_SEARCH = gql`

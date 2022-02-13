@@ -8,12 +8,12 @@
 
   &__logo {
     font-size: 96px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgb(255 255 255 / 30%);
     cursor: pointer;
     transition: all 600ms;
 
     &--active {
-      color: #161B22;
+      color: #161b22;
     }
   }
 }
