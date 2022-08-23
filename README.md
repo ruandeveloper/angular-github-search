@@ -1,5 +1,7 @@
 # Angular GitHub Search
 
+Trata-se de um projeto, onde fui desafiado a criar uma aplicação que consumisse a API de busca de usuários e repositorios do GitHub.
+
 ## 🎨 Prototipagem
 
 -   Prototipagem feita atráves do Figma
